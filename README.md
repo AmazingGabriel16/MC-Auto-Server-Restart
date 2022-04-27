@@ -1,11 +1,3 @@
-# Do not use!
-
-Memory leak detected!
-
-![image](https://user-images.githubusercontent.com/23047921/165639853-74d17da9-1faf-4999-ab68-4a9adb5aac69.png)
-
-Sorry for the late finding, was looking at the wrong processors in Task Manager when I first ran the tests.
-
 # MC Auto Server Restart
 
 This is a smol Python script that will make it so that when your Minecraft server closes instead of restarting, the script will automatically restart the server. All because Paper's /restart has been broken for the past 4+ years without a fix and I want to do less restarting and more gaming on the server
