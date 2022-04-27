@@ -9,7 +9,7 @@ import subprocess
 
 # @echo off
 # java -Xmx12000M -Xms12000M -jar paper.jar nogui
-# python .\start.py
+# goto :eof
 
 def runServer ():
     subprocess.call('.\start.bat')
@@ -18,13 +18,13 @@ def msg (msg_in):
    print('[Python Server Handler]: ' + msg_in)
 
 # Change to True or False if you would like the server to auto-restart when closed
-auto_restart = False
+auto_restart = True
 msg('Auto-restart: ' + str(auto_restart))
 
 msg('Starting server!')
-if auto_restart == True:
+while auto_restart == True:
     msg('Server auto-restarting!')
     runServer()
-else:
-    if input('[Python Server Handler]: Start server? [Y/N]: ').upper() == 'Y'.upper():
-        runServer()
+
+if input('[Python Server Handler]: Start server? [Y/N]: ').upper() == 'Y'.upper():
+    runServer()
